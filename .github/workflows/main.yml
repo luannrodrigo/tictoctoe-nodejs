@@ -1,0 +1,33 @@
+name: CI
+
+on:
+  # Triggers the workflow on push or pull request events but only for the main branch
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+    
+      - name: "Configure nodejs"
+      - uses: actions/setup-node@v2
+        with:
+            node-version: '14'
+          
+      - name: Install dependecies
+        run: yarn
+        
+      - name: copy files to ec2
+        uses: appleboy/scp-action@master
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USERUSERNAME }}
+          port: ${{ secrets.SSH_PORT }}
+          key: ${{ secrets.SSH_KEY }}
+          source: "*"
+          target: "test"
+        
+      
