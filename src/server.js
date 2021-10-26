@@ -1,6 +1,8 @@
+import 'dotenv/config';
+
 import app from './app';
 
-app.listen(3333, () => {
+app.listen(process.env.APP_PORT, () => {
   // eslint-disable-next-line no-console
-  console.log('listening port 3333');
+  console.log(`listening port ${process.env.APP_PORT}`);
 });
