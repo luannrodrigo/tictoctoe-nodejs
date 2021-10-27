@@ -1,4 +1,4 @@
 #!/bin/sh
 
 echo "restart app"
-pm2 restart 0
+su -u ubuntu pm2 restart 0
