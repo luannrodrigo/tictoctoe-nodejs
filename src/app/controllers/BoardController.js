@@ -2,12 +2,13 @@ import BoardService from '../services/BoardService';
 
 class BoardController {
   async show(request, response) {
-    const board = request.params;
-    const splitedBoard = board[0].replace(/\/\?board=/g, '').split('');
+    const { board } = request.query;
 
-    const boardWithBestMoviment = await BoardService.run({ splitedBoard });
+    const splittedBoard = board.split('');
 
-    return response.status(201).json({ turn: boardWithBestMoviment });
+    const boardWithBestMovement = await BoardService.run({ splittedBoard });
+
+    return response.status(201).json(boardWithBestMovement);
   }
 }
 
