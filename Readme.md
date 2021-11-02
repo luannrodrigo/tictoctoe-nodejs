@@ -39,20 +39,18 @@ Acesso em http://localhost<PORT>
 
 **Exemplos de uso**
 
-**### Parametros: %3Fboard%3D%20%20xoo%20%20%20x**
+**### Parametros: board= xxo  o  **
 
 ***Local***
 
-url: http://localhost:3333%3Fboard%3D%20%20xoo%20%20%20x
-
-![plot](./img/image1.png)
+url: http://localhost:3333
 
 ***Web***
 **baseUrl**: http://ec2-18-116-230-49.us-east-2.compute.amazonaws.com:3333
 
-url: http://ec2-18-116-230-49.us-east-2.compute.amazonaws.com:3333/%3Fboard%3D%20%20xoo%20%20%20x
+url: http://ec2-18-116-230-49.us-east-2.compute.amazonaws.com:3333
 
-![plot](./img/image2.png)
+![plot](./img/image.png)
 
 
 Feito com ❤️ por Luann Rodrigo
