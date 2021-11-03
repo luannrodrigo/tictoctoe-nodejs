@@ -19,7 +19,7 @@ git clone https://github.com/luannrodrigo/tictoctoe-nodejs.git
 ```wnc
 # APP
 APP_PORT=<Porta que deseja rodar>
-NODE_ENV=<TIpo ambiente | producation | develipment>
+NODE_ENV=<Tipo ambiente | production | development>
 ```
 
 
